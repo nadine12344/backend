@@ -1,0 +1,40 @@
+{
+  "name": "guc-portal",
+  "version": "1.0.0",
+  "description": "//////////////////////////////////////////////////////////////////////////////////////////////////////////\r Functionality: for academic member to view schedule\r Route: /schedule/viewSchedule\r Request type: GET\r Response(the sccedule with replacements if available):\r {\r     \"msg\": \"success\",\r     \"schedule\": [\r         {\r             \"_id\": \"5fda1caf83892c0618ca7744\",\r             \"academicMember\": \"m2\",\r             \"slots\": [\r                 {\r                     \"_id\": \"5fda1e946836e85428741830\",\r                     \"location\": \"c6\"\r                 },\r                 {\r                     \"_id\": \"5fda1eb746fc231f08366524\",\r                     \"location\": \"c6\"\r                 }\r             ],\r             \"replacements\": [],\r             \"__v\": 0\r         }\r     ]\r }\r //////////////////////////////////////////////////////////////////////////////////////////////\r Functionality: for academic member to send replacement request\r Route: /request/sendReplacementRequest\r Request type: POST\r Request body(the slot id the id of one you want to replace with and optionally a reason):\r {\r    \"to\":\"lala\",\r    \"slot\":\"5fd8f8139f79a23eecf3d785\",\r    \"reason\":\"ay kalam\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js",
+   
+    "start": "node server.js"
+  
+   
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-list-endpoints": "^4.0.1",
+   
+    "joi": "^14.3.1",
+    "joi-phone-number": "^4.1.1",
+    "json2csv": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-redis": "^6.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.9.21",
+    "mongoose-beautiful-unique-validation": "^7.1.1",
+    "nodemon": "^2.0.4",
+    "querystring": "^0.2.0",
+   
+    "redis": "^3.0.2"
+  }
+}
