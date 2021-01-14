@@ -75,7 +75,7 @@ app.use('/',(req,res,next)=>{
  
 })
 
-app.use(cors())
+
 app.use(express.static(path.join(__dirname, "client", "build")))
 //app.UseCors(options => options.AllowAnyOrigin());
 app.use('/logging',log)
