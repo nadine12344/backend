@@ -74,8 +74,16 @@ app.use('/',(req,res,next)=>{
   next()
  
 })
+var corsUrl;
+if (process.env.NODE_ENV === 'development') {
+  corsUrl = process.env.LOCAL_URL  // http://localhost:8080
+} else if (process.env.NODE_ENV === 'production') {
+  corsUrl = process.env.DEPLOY_URL // http://myapp.com
+}
 
-app.use(cors())
+app.use(cors({
+  origin: corsUrl
+}))
 app.use(express.static(path.join(__dirname, "client", "build")))
 //app.UseCors(options => options.AllowAnyOrigin());
 app.use('/logging',log)
