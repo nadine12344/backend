@@ -23,11 +23,7 @@ const app = express();
 //   });
 // });
 
-var corsO={
-      origin: ' https://blooming-peak-21127.herokuapp.com/',
-    //  origin: 'http://localhost:3000',
-      methods: ["GET", "POST","PUT","DELETE"]
-    }
+
 const location=require('./routes/location.router');
 const facultyRoute=require('./routes/faculty.router');
 const { connectDB } = require('./config/dbConfig');
@@ -52,7 +48,7 @@ const courseModel = require('./models/course.model');
 const departementModel = require('./models/department.model');
 const request=require('./routes/requests.router');
 const hrmodel = require('./models/hr.model');
-var cors = require('cors');
+
 const slotsModel = require('./models/slots.model');
 const replacementModel = require('./models/replacements.model');
 const notificationModel = require('./models/notification.model');
