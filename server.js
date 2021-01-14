@@ -22,7 +22,11 @@ const app = express();
 //     console.log("user disconnected");
 //   });
 // });
-
+var corsO={
+  origin: 'http://blooming-peak-21127.herokuapp.com',
+//  origin: 'http://localhost:3000',
+  methods: ["GET", "POST","PUT","DELETE"]
+}
 
 const location=require('./routes/location.router');
 const facultyRoute=require('./routes/faculty.router');
