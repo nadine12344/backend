@@ -24,7 +24,7 @@ const app = express();
 // });
 
 var corsO={
-      origin: 'http://guc2.herokuapp.com',
+      origin: ' https://blooming-peak-21127.herokuapp.com/',
     //  origin: 'http://localhost:3000',
       methods: ["GET", "POST","PUT","DELETE"]
     }
@@ -74,16 +74,8 @@ app.use('/',(req,res,next)=>{
   next()
  
 })
-var corsUrl;
-if (process.env.NODE_ENV === 'development') {
-  corsUrl = process.env.LOCAL_URL  // http://localhost:8080
-} else if (process.env.NODE_ENV === 'production') {
-  corsUrl = process.env.DEPLOY_URL // http://myapp.com
-}
 
-app.use(cors({
-  origin: corsUrl
-}))
+app.use(cors())
 app.use(express.static(path.join(__dirname, "client", "build")))
 //app.UseCors(options => options.AllowAnyOrigin());
 app.use('/logging',log)
